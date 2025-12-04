@@ -1,0 +1,3 @@
+### Get Sender By Id
+GET {{host}}/api/senders/8d4b5840-a3ff-4a12-9499-d328369dd008
+Authorization: Bearer {{token}}

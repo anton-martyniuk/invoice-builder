@@ -1,0 +1,12 @@
+### Create Sender
+POST {{host}}/api/senders
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "senderCompanyName": "My Company LLC",
+  "senderFullName": "Alice Smith",
+  "senderAddress": "456 Market St, City",
+  "senderTaxVatId": "TAX-987654",
+  "bankDetails": "IBAN XX00 0000 0000 0000 0000 00"
+}

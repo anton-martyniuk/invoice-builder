@@ -1,0 +1,12 @@
+### Update Sender
+PUT {{host}}/api/senders/8d4b5840-a3ff-4a12-9499-d328369dd008
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "senderCompanyName": "My Company LLC Updated",
+  "senderFullName": "Alice Smith",
+  "senderAddress": "456 Market St, City",
+  "senderTaxVatId": "TAX-987654",
+  "bankDetails": "IBAN XX00 0000 0000 0000 0000 00"
+}

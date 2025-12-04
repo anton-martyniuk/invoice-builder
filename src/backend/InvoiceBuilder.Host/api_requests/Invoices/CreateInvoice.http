@@ -1,0 +1,37 @@
+﻿### Create Invoice
+POST {{host}}/api/invoices
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "invoiceNumber": "INV-2025-003",
+    "invoiceDate": "2025-01-15T00:00:00Z",
+    "dueDate": "2025-02-15T00:00:00Z",
+    "currency": "USD",
+    "notes": "Payment due within 30 days. Thank you for your business!",
+    "customerId": "07e1dccf-6777-4f3f-9986-7081c1620935",
+    "senderId": "777b2c4f-435f-4252-b4f8-2f00f06dec25",
+    "subtotal": 1000.00,
+    "taxRate": 0.10,
+    "totalAmount": 1100.00,
+    "lineItems": [
+        {
+            "itemName": "Web Development Services",
+            "quantity": 40,
+            "unitPrice": 50.00,
+            "total": 2000.00
+        },
+        {
+            "itemName": "Design Consultation",
+            "quantity": 10,
+            "unitPrice": 75.00,
+            "total": 750.00
+        },
+        {
+            "itemName": "Hosting Services",
+            "quantity": 1,
+            "unitPrice": 250.00,
+            "total": 250.00
+        }
+    ]
+}

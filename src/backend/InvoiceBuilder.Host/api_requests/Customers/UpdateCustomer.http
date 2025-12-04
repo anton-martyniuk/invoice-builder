@@ -1,0 +1,13 @@
+### Update Customer
+PUT {{host}}/api/customers/fd367844-e916-4dfa-948a-69f826c65fd7
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "companyName": "ACME Corp Updated",
+  "customerName": "John Doe",
+  "customerAddress": "123 Main St, City",
+  "postalCode": "12345",
+  "customerEmail": "john.doe@example.com",
+  "customerTaxVatId": "VAT-654321"
+}

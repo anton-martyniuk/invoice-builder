@@ -1,0 +1,18 @@
+### Login Admin user
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+    "Email": "admin@test.com",
+    "Password": "Test1234!"
+}
+
+
+### Login Manager user
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+"Email": "manager@test.com",
+"Password": "Test1234!"
+}

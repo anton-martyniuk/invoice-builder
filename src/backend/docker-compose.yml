@@ -1,0 +1,63 @@
+services:
+  shipping-modular-monolith:
+    image: shipping-modular-monolith
+    container_name: shipping-modular-monolith
+    build:
+      context: .
+      dockerfile: ./ModularMonolith.Host/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4318
+      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+      - OTEL_EXPORTER_OTLP_HEADERS=X-Seq-ApiKey=abcde12345
+    restart: always
+    networks:
+      - docker-web
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      - TZ
+      - POSTGRES_USER=admin 
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=modular_monolith
+    volumes:
+      - ./docker_data/pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: always
+    networks:
+      - docker-web
+      
+  seq:
+    image: datalust/seq:2024.3
+    container_name: seq
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+    volumes:
+      - ./docker_data/seq:/data
+    ports:
+      - "5341:5341"
+      - "8081:80"
+    networks:
+      - docker-web
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: jaeger
+    restart: always
+    ports:
+      - 4317:4317
+      - 4318:4318
+      - 16686:16686
+    networks:
+        - docker-web
+    
+
+networks:
+  docker-web:
+    driver: bridge

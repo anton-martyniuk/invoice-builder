@@ -1,0 +1,13 @@
+### Create Customer
+POST {{host}}/api/customers
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "companyName": "ACME Corp",
+  "customerName": "John Doe",
+  "customerAddress": "123 Main St, City",
+  "postalCode": "12345",
+  "customerEmail": "john.doe@example.com",
+  "customerTaxVatId": "VAT-123456"
+}

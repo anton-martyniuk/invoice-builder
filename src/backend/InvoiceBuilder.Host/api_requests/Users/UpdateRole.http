@@ -1,0 +1,8 @@
+### Update user role
+POST {{host}}/api/users/1e1a45ba-ec70-46a3-b713-8b3458aabd46/role
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "NewRole": "Manager"
+}

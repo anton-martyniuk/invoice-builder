@@ -1,0 +1,14 @@
+bin
+obj
+.idea
+.vs
+*.db*
+*.bak
+*.zip
+*.7z
+appsettings.development.json
+appsettings.production.json
+*.sln.DotSettings.user
+docker_data
+node_modules
+*.user

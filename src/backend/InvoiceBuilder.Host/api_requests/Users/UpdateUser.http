@@ -1,0 +1,8 @@
+PUT {{host}}/api/users/1e1a45ba-ec70-46a3-b713-8b3458aabd46
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "Id": "1e1a45ba-ec70-46a3-b713-8b3458aabd46",
+    "Email": "test222@test.com"
+}

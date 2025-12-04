@@ -1,0 +1,17 @@
+﻿### Update Invoice
+PUT {{host}}/api/invoices/3e199c56-6105-4e02-af92-bf62d07b6812
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "invoiceNumber": "INV-2025-002-UPDATED",
+    "invoiceDate": "2025-01-15T00:00:00Z",
+    "dueDate": "2025-03-15T00:00:00Z",
+    "currency": "USD",
+    "notes": "Payment due within 60 days. Updated terms apply.",
+    "customerId": "07e1dccf-6777-4f3f-9986-7081c1620935",
+    "senderId": "777b2c4f-435f-4252-b4f8-2f00f06dec25",
+    "subtotal": 1500.00,
+    "taxRate": 0.10,
+    "totalAmount": 1650.00
+}

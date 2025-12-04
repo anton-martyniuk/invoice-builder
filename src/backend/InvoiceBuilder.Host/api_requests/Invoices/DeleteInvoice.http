@@ -1,0 +1,3 @@
+﻿### Delete Invoice
+DELETE {{host}}/api/invoices/3e199c56-6105-4e02-af92-bf62d07b6812
+Authorization: Bearer {{token}}

@@ -1,0 +1,3 @@
+﻿### Download Invoice PDF
+GET {{host}}/api/invoices/3f62b6d0-4e89-48a2-a3d4-68351884c0ac/download
+Authorization: Bearer {{token}}

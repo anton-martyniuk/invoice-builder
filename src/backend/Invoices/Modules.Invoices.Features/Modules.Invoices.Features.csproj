@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    </PropertyGroup>
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+        <PackageReference Include="IronPdf" />
+        <PackageReference Include="Razor.Templating.Core" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\Common\Modules.Common.API\Modules.Common.API.csproj" />
+        <ProjectReference Include="..\..\Common\Modules.Common.Application\Modules.Common.Application.csproj" />
+        <ProjectReference Include="..\..\Common\Modules.Common.Domain\Modules.Common.Domain.csproj" />
+        <ProjectReference Include="..\Modules.Invoices.Domain\Modules.Invoices.Domain.csproj" />
+        <ProjectReference Include="..\Modules.Invoices.Infrastructure\Modules.Invoices.Infrastructure.csproj" />
+    </ItemGroup>
+</Project>
